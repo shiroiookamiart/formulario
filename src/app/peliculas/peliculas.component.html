@@ -1,11 +1,12 @@
+<!--codigo html en el componente pelicula aqui es donde se mostrar la informacion en formulario-->
 <h2>Añadir película</h2>
 <form>
     <label>
       Nombre de la película:
-      <input type="text" name="nombre" [(ngModel)]="nombrePelicula">
+      <input type="text" name="nombre" [(ngModel)]="nombrePelicula"> <!--input de ingreso de dato, en este caso nombre de la pelicula-->
     </label>
-    <button type="submit" (click)="agregarPelicula()">Añadir</button>
+    <button type="submit" (click)="agregarPelicula()">Añadir</button> <!--accion de almacenamiento-->
   </form>
-  <ul>
+  <ul><!--listo las peliculas una ves se haya guardado en el arreglo-->
     <li *ngFor="let pelicula of peliculas">{{ pelicula }}</li>
   </ul>
