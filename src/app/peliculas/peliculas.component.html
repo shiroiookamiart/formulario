@@ -1,0 +1,11 @@
+<h2>Añadir película</h2>
+<form>
+    <label>
+      Nombre de la película:
+      <input type="text" name="nombre" [(ngModel)]="nombrePelicula">
+    </label>
+    <button type="submit" (click)="agregarPelicula()">Añadir</button>
+  </form>
+  <ul>
+    <li *ngFor="let pelicula of peliculas">{{ pelicula }}</li>
+  </ul>
